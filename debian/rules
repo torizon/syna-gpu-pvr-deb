@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+DEB_HOST_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_OPTIONS=noautodbgsym
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	cp /data/gfx_prebuilt/imagination/sl1680/aarch64-poky-linux/lib/* /usr/lib
+
+override_dh_strip_nondeterminism:
