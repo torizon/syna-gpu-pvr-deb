@@ -1,1 +1,1 @@
-usr/lib/${DEB_HOST_MULTIARCH}/*
+data/gfx_prebuilt/imagination/sl1680/aarch64-poky-linux/lib/*.so usr/lib/${DEB_HOST_MULTIARCH}/

@@ -1,4 +1,4 @@
-syna-gpu-pvr (6.12) UNRELEASED; urgency=medium
+syna-gpu-pvr (1.0.0-1+toradex1) bookworm; urgency=medium
 
   * Initial release.
 

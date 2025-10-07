@@ -3,6 +3,8 @@ Priority: optional
 Maintainer: Toradex Packaging Team <debian-pkg-team@toradex.com>
 Build-Depends: ca-certificates,
  debhelper-compat (= 13),
+ libdrm2,
+ libwayland-client0
 Standards-Version: 4.7.0
 Section: libs
 
@@ -10,34 +12,16 @@ Package: syna-gpu-pvr
 Section: libs
 Architecture: any
 Multi-Arch: same
-Provides: libegl1 (= 1.6.0-1),
- libgbm1 (= 22.3.6-1+deb12u1),
- libgles1 (= 1.6.0-1),
- libgles2 (= 1.6.0-1),
- libopencl-1.2-1,
- ocl-icd-libopencl1
-Conflicts: libegl1,
- libgbm1,
- libgles1,
- libgles2,
- libopencl-1.2-1,
- ocl-icd-libopencl1
-Replaces: libegl1,
- libgbm1,
- libgles1,
- libgles2,
- libopencl-1.2-1,
- ocl-icd-libopencl1
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: PVR Wayland binaries
  PVR Userspace Graphics libraries for wayland.
 
-# Package: imx-gpu-mali-dev
-# Section: libdevel
-# Architecture: any
-# Multi-Arch: same
-# Depends: imx-gpu-mali (= ${binary:Version}),
-#  libdrm-dev,
-#  ${misc:Depends}
-# Description: Development files for imx-gpu-mali
-#  Mali development files for wayland.
+Package: syna-gpu-pvr-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: syna-gpu-pvr (= ${binary:Version}),
+ libdrm-dev,
+ ${misc:Depends}
+Description: Development files for syna-gpu-pvr
+ PVR development files for wayland.
