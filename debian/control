@@ -8,7 +8,7 @@ Build-Depends: ca-certificates,
 Standards-Version: 4.7.0
 Section: libs
 
-Package: syna-gpu-pvr
+Package: sl1680-gpu-pvr
 Section: libs
 Architecture: any
 Multi-Arch: same
@@ -16,12 +16,12 @@ Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: PVR Wayland binaries
  PVR Userspace Graphics libraries for wayland.
 
-Package: syna-gpu-pvr-dev
+Package: sl1680-gpu-pvr-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: syna-gpu-pvr (= ${binary:Version}),
+Depends: sl1680-gpu-pvr (= ${binary:Version}),
  libdrm-dev,
  ${misc:Depends}
-Description: Development files for syna-gpu-pvr
+Description: Development files for sl1680-gpu-pvr
  PVR development files for wayland.
