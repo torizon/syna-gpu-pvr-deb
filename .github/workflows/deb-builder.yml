@@ -16,7 +16,7 @@ jobs:
     with:
       arch: ${{ matrix.arch }}
       docker-image: debian:bookworm
-      package-name: syna-gpu-pvr
+      package-name: sl1680-gpu-pvr
       run-attestation: true
       run-piuparts: false
       upload-artifacts: true
