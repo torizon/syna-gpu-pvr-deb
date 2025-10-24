@@ -1,0 +1,27 @@
+Source: sl1680-gpu-pvr
+Priority: optional
+Maintainer: Toradex Packaging Team <debian-pkg-team@toradex.com>
+Build-Depends: ca-certificates,
+ debhelper-compat (= 13),
+ libdrm2,
+ libwayland-client0
+Standards-Version: 4.7.0
+Section: libs
+
+Package: sl1680-gpu-pvr
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: PVR Wayland binaries
+ PVR Userspace Graphics libraries for wayland.
+
+Package: sl1680-gpu-pvr-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: sl1680-gpu-pvr (= ${binary:Version}),
+ libdrm-dev,
+ ${misc:Depends}
+Description: Development files for sl1680-gpu-pvr
+ PVR development files for wayland.
